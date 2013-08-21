@@ -1,0 +1,49 @@
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <title>Connector Demo</title>
+  <desc>Alternate description</desc>
+  <metadata>author: schepers, created: 12-10-2009</metadata>
+
+  <script id="connectorLibrary" xlink:href="connector.js" type="text/ecmascript"/>
+
+  <defs>
+    <marker id="arrow" viewBox="-13 -6 15 12"
+            refX="0" refY="0" markerWidth="8" markerHeight="16" orient="auto">
+      <path d="M-10,-5 L0,0 -10,5 Z" stroke="black" fill="black" stroke-linejoin="round" stroke-linecap="round"/>
+    </marker>
+
+  </defs>
+
+ <g id="nodes">
+
+    <polygon id="d1" fill="blue" points="0,-45 70,0 0,45 -70,0">
+        <point id="d1-1" role="port input" x="0" y="-45" />
+        <point id="d1-2" role="port input" x="-70" y="0" />
+        <point id="d1-3" role="port output" x="0" y="45" />
+        <point id="d1-4" role="port input" x="70" y="0" />
+      </polygon>
+
+    <circle cx="300" cy="300" r="25" id="c1"  fill="blue" stroke="#483d8b" focusable="true">
+      <point id="c1-1" role="port" x="25" y="0" />
+      <point id="c1-2" role="port" x="17.68" y="17.68" />
+      <point id="c1-3" role="port" x="0" y="25" />
+      <point id="c1-4" role="port" x="-17.68" y="17.68" />
+      <point id="c1-5" role="port" x="-25" y="0" />
+      <point id="c1-6" role="port" x="-17.68" y="-17.68" />
+      <point id="c1-7" role="port" x="0" y="-25" />
+      <point id="c1-8" role="port" x="17.68" y="-17.68" />
+    </circle>
+
+  </g>
+
+
+  <g stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <connector id="d1-c1" n1="#d1" n2="#c1" n1port="output" n2port="port" directed="true"
+       marker-end="url(#arrow)" stroke-dasharray="5,10">
+    </connector>  
+
+  </g>
+
+</svg>
+
